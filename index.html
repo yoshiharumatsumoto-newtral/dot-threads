@@ -114,6 +114,7 @@ window.addEventListener('mousemove', e => {
   hint.style.opacity = '0';
 });
 window.addEventListener('touchstart', e => {
+  if (e.target.id === 'back') return;
   e.preventDefault();
   isTouching = true;
   touchStartTime = performance.now();
